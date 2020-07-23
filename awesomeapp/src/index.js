@@ -13,6 +13,14 @@ const time=new Date().toLocaleTimeString();
 const img1="https://picsum.photos/200/300"
 const img2="https://picsum.photos/250/300"
 const img3="https://picsum.photos/240/300"
+
+const heading={
+  color:"yellow",
+  textTransform:"capitalize",
+  textAlign:"center",
+  fontFamily:" 'Lobster', cursive"
+}
+
 // ReactDOM.render('kya dikhana hai','kahan dikhana hai','callback func');
 ReactDOM.render(
   //div or [ , ] if version above 16 is compulsary for multiple elements
@@ -20,7 +28,7 @@ ReactDOM.render(
   //We should use React fragment instead of div if version is before 16 as div will create extra div
 
   <React.Fragment>
-    <h1 className="heading">Hello {`My name is ${firstname} ${lastname}`}</h1>
+    <h1 className="heading" style={heading}>Hello {`My name is ${firstname} ${lastname}`}</h1>
     <p>Today date is {`${date}`}</p>
     <ol>
       <li>Time is {`${time}`}</li>

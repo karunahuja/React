@@ -17,7 +17,7 @@ code {
   text-align:center;text-transform: capitalize;
   font-weight:bold;
   margin:50px 0;
-  font-family: 'Lobster', cursive;
+font-family: 'Lobster', cursive;
 }
 .img_div{
   display:flex;
