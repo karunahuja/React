@@ -15,11 +15,10 @@ ReactDOM.render(
 <React.Fragment>
 
   <ol>
-    <li>Karun</li>
-    <li>{ques.default}</li>
-    <li>{ques.favprog}</li>
-    <li>{ques.myName()}</li>
-    <li>{ques.myNames()}</li>
+    <li>{ques.add(40,4)}</li>
+    <li>{ques.subtract(30,3)}</li>
+    <li>{ques.multiply(40,4)}</li>
+    <li>{ques.divide(30,4)}</li>
 
   </ol>
 
