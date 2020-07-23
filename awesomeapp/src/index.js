@@ -3,6 +3,9 @@ import React from 'react'; //writing in es6 as babel will convert it to browser 
 // var ReactDOM = require('react-dom');
 import ReactDOM from 'react-dom';
 import './index.css'
+import Heading from './Heading';
+import Para from './Para';
+import List from './List';
 
 const firstname="Karun";
 const lastname="Ahuja";
@@ -20,6 +23,29 @@ const heading={
   textAlign:"center",
   fontFamily:" 'Lobster', cursive"
 }
+
+const cssStyle={
+  color:'green'
+}
+
+let curdate=new Date();
+curdate=curdate.getHours();
+let greeting=''
+if(curdate>=1 && curdate<12){
+  greeting='Good Morning';
+  cssStyle.color="green"
+}
+else if(curdate>=12 && curdate<19){
+  greeting="Good Afternoon"
+  cssStyle.color="yellow"
+}
+else{
+  greeting="Good Night"
+  cssStyle.color="pink"
+}
+
+
+
 
 // ReactDOM.render('kya dikhana hai','kahan dikhana hai','callback func');
 ReactDOM.render(
@@ -41,6 +67,12 @@ ReactDOM.render(
     <img src={img1} alt=""></img>
     <img src={img2} alt=""></img>
     <img src={img3} alt=""></img></div>
+    
+  <h2 style={cssStyle}>Hello Sir, {greeting}</h2>
+
+  <Heading></Heading>
+  <Para></Para>
+<List></List>
   </React.Fragment>
 
   ,
