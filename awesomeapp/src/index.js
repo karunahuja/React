@@ -2,6 +2,7 @@
 import React from 'react'; //writing in es6 as babel will convert it to browser compatible javascript 
 // var ReactDOM = require('react-dom');
 import ReactDOM from 'react-dom';
+import './index.css'
 
 const firstname="Karun";
 const lastname="Ahuja";
@@ -19,19 +20,19 @@ ReactDOM.render(
   //We should use React fragment instead of div if version is before 16 as div will create extra div
 
   <React.Fragment>
-    <h1 contentEditable="true">Hello {`My name is ${firstname} ${lastname}`}</h1>
+    <h1 className="heading">Hello {`My name is ${firstname} ${lastname}`}</h1>
     <p>Today date is {`${date}`}</p>
     <ol>
       <li>Time is {`${time}`}</li>
       <li>Extra circular</li>
       <li>Holo</li>
       <li>Love</li>
-      
     </ol>
-    
+
+    <div className="img_div">
     <img src={img1} alt=""></img>
     <img src={img2} alt=""></img>
-    <img src={img3} alt=""></img>
+    <img src={img3} alt=""></img></div>
   </React.Fragment>
 
   ,
