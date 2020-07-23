@@ -7,7 +7,8 @@ const firstname="Karun";
 const lastname="Ahuja";
 
 console.log(`my name is ${firstname}`);
-
+const date=new Date().toLocaleDateString();
+const time=new Date().toLocaleTimeString();
 // ReactDOM.render('kya dikhana hai','kahan dikhana hai','callback func');
 ReactDOM.render(
   //div or [ , ] if version above 16 is compulsary for multiple elements
@@ -16,9 +17,9 @@ ReactDOM.render(
 
   <React.Fragment>
     <h1>Hello {`My name is ${firstname} ${lastname}`}</h1>
-    <p>List of 5 best series</p>
+    <p>Today date is {`${date}`}</p>
     <ol>
-      <li>Dark {2+3}</li>
+      <li>Time is {`${time}`}</li>
       <li>Extra circular</li>
       <li>Holo</li>
       <li>Love</li>
