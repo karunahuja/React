@@ -3,9 +3,7 @@ import React from 'react'; //writing in es6 as babel will convert it to browser 
 // var ReactDOM = require('react-dom');
 import ReactDOM from 'react-dom';
 import './index.css'
-import Heading from './Heading';
-import Para from './Para';
-import List from './List';
+import App from './App';
 
 const firstname="Karun";
 const lastname="Ahuja";
@@ -70,9 +68,9 @@ ReactDOM.render(
     
   <h2 style={cssStyle}>Hello Sir, {greeting}</h2>
 
-  <Heading></Heading>
-  <Para></Para>
-<List></List>
+  <App></App>
+
+
   </React.Fragment>
 
   ,
