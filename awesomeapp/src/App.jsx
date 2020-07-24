@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 
 
-
+let date=new Date().toLocaleTimeString();
 
 const App=()=>{
         // let name=['vi','no','d'];
@@ -10,12 +10,12 @@ const App=()=>{
     // const [name1,name2,name3]=name;  
     
 const state=useState();//return current data and updated data
-const[count,setCount]=useState(0);//0 is initial value, count is current value(0) initially,set count is updated value and updated value becomes current value of count
+const[count,setCount]=useState(date);//0 is initial value, count is current value(0) initially,set count is updated value and updated value becomes current value of count
     
 
 
     const IncNum=()=>{
-        setCount(count+1);
+        setCount(new Date().toLocaleTimeString());
         //  will not applicable in react       count++;
         
     }
