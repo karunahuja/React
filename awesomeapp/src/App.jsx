@@ -7,20 +7,26 @@ import * as ques from './App.jsx';
 
 import Card from './Card.jsx';
 import Sdata from './Sdata';
+import Netflix from './Netflix'
+import Amazon from './Amazon'
 
+const favSeries="netflix"
+const FavS=()=>{
+
+if(favSeries=="netflix"){
+  return <Netflix></Netflix>
+
+}else{
+
+  return <Amazon></Amazon>
+}
+
+}
 const App = () => (
     <>
-        {Sdata.map((val, index) => {
-            return (
-
-
-                <Card key={val.id}
-                    imgsrc={val.imgsrc}
-                    title={val.title}
-                    sname={val.sname}
-                    link={val.link}></Card>
-            );
-        })}    </>
+      <FavS></FavS>
+    
+       </>
 
 
 
