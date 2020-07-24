@@ -1,38 +1,20 @@
-// var React=require('react');
-import React from 'react'; //writing in es6 as babel will convert it to browser compatible javascript 
-// var ReactDOM = require('react-dom');
-import ReactDOM from 'react-dom';
-import './index.css'
-import * as ques from './App.jsx';
+import React from 'react';
 
-import Card from './Card.jsx';
-import Sdata from './Sdata';
-import Netflix from './Netflix'
-import Amazon from './Amazon'
+import SlotM from './SlotMatch'
 
-const favSeries="netflix"
-const FavS=()=>{
+const App=()=>{
+return<>
+<h1>😁Welcome to <span style={{fontWeight:"bold"}}> Slot machine game</span></h1>
 
-// if(favSeries=="netflix"){
-//   return <Netflix></Netflix>
+<div>
+<SlotM x="😍" y="👌" z="👍"></SlotM>
+<SlotM x="😍"y="😍"z="😍"></SlotM>
+<SlotM x="😍"y="😍"z="👌"></SlotM>
+</div>
 
-// }else{
-
-//   return <Amazon></Amazon>
-// }
+</>
 
 }
-const App = () => (
-    <>
-      {/* <FavS></FavS> */}
-      
-      {(favSeries=="netflix")?<Netflix/>:<Amazon></Amazon>}
-       
-       </>
-
-
-
-);
 
 export default App;
 
