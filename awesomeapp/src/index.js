@@ -25,7 +25,6 @@ ReactDOM.render(
    <Card imgsrc={Sdata[1].imgsrc} title={Sdata[1].title} sname={Sdata[1].sname} link={Sdata[1].link}></Card>
    <Card imgsrc={Sdata[2].imgsrc} title={Sdata[2].title} sname={Sdata[2].sname} link={Sdata[2].link}></Card>
 
-
   </React.Fragment>
 
 
