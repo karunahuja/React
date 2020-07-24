@@ -1,7 +1,7 @@
 import React from 'react';
-
-function Heading(){
-    return <h1>My name is Karun</h1>;
+import Sdata from './Sdata'
+function Heading(props){
+    return <h1>{props.sname}</h1>;
 }
 
 export default Heading;
