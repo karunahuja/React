@@ -3,30 +3,21 @@ import React,{useState} from 'react';
 
 const App=()=>{
 
-
-    const purple="#8e44ad"
-    const [bg,setBg] = useState(purple);
-
-    const [name,setName]=useState('Karun');
-
-const bgChange=()=>{
-    let newBg="#34495e"
-
-    setBg(newBg);
-    setName("Rahul");
-
+    const [name,setName]=useState("Vinod");
+    const [fullname,setfullname]=useState("")
+const onSubmit=()=>{
+    setfullname(name)
 }
-const bgback=()=>{
-    let newBg="#8e44ad"
 
-    setBg(newBg);
-    setName("Rohan");
-
+const InputEvent=(event)=>{
+    console.log(event.target.value);
+    setName(event.target.value);
 }
     return(
         <>
-        <div style={{backgroundColor:bg}}>
-        <button onClick={bgChange} onDoubleClick={bgback}>{name}</button>
+        <div><h1>hello {fullname}</h1>
+       <input type="text" placeholder="Enter your name" value={name} onChange={InputEvent} /*value="name" can't use value*/></input>
+       <button onClick={onSubmit}>Click me</button> 
         </div></>
     )
 
