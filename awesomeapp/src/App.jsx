@@ -13,19 +13,21 @@ import Amazon from './Amazon'
 const favSeries="netflix"
 const FavS=()=>{
 
-if(favSeries=="netflix"){
-  return <Netflix></Netflix>
+// if(favSeries=="netflix"){
+//   return <Netflix></Netflix>
 
-}else{
+// }else{
 
-  return <Amazon></Amazon>
-}
+//   return <Amazon></Amazon>
+// }
 
 }
 const App = () => (
     <>
-      <FavS></FavS>
-    
+      {/* <FavS></FavS> */}
+      
+      {(favSeries=="netflix")?<Netflix/>:<Amazon></Amazon>}
+       
        </>
 
 
