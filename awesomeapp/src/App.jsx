@@ -1,34 +1,33 @@
 import React,{useState} from 'react';
 
 
-let date=new Date().toLocaleTimeString();
-
 const App=()=>{
-        // let name=['vi','no','d'];
-    // const [vi,no,d]=name;
-    
-    // const [name1,name2,name3]=name;  
- 
-    
-const state=useState();//return current data and updated data
-const[count,setCount]=useState(date);//0 is initial value, count is current value(0) initially,set count is updated value and updated value becomes current value of count
-    
 
 
-    const IncNum=()=>{
-        setCount(new Date().toLocaleTimeString());
-        //  will not applicable in react       count++;
-        
-    }
-    setInterval(() => {
-        IncNum()
-    }, 1000);
-    
+    const purple="#8e44ad"
+    const [bg,setBg] = useState(purple);
+
+    const [name,setName]=useState('Karun');
+
+const bgChange=()=>{
+    let newBg="#34495e"
+
+    setBg(newBg);
+    setName("Rahul");
+
+}
+const bgback=()=>{
+    let newBg="#8e44ad"
+
+    setBg(newBg);
+    setName("Rohan");
+
+}
     return(
         <>
-        <h1>{count}</h1>
-      
-        </>
+        <div style={{backgroundColor:bg}}>
+        <button onClick={bgChange} onDoubleClick={bgback}>{name}</button>
+        </div></>
     )
 
 }
