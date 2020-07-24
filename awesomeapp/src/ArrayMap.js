@@ -30,3 +30,10 @@ const newData=studentdata.map((cvalue)=>{
 console.log(newData);
 // showdata must be present in html
 document.getElementById('showdata').innerHtml=newData;
+
+
+
+function myname(a,b){
+    return a+b;
+}
+const myname=(a,b)=>a+b;

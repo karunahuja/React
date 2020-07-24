@@ -5,9 +5,9 @@ const Sdata = [
     { imgsrc:"https://asianwiki.com/images/4/47/Human_Class-KDH.jpg", title:"A netflix originals", sname:"Extra curricular", link:"https://www.netflix.com/title/80990668" },
     { imgsrc:"https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png", title:"A netflix originals", sname:"Stranger Things", link:"https://www.netflix.com/title/80057281" }
 
-
-
-
 ]
+
+
+
 
 export default Sdata

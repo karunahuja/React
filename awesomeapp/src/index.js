@@ -8,6 +8,17 @@ import * as ques from './App.jsx';
 import Card from './Card.jsx';
 import Sdata from './Sdata';
 
+function ncard(val){
+
+  return(
+    
+   <Card imgsrc={val.imgsrc} title={val.title} sname={val.sname} link={val.link}></Card>
+  
+  );
+
+}
+
+
 // ReactDOM.render('kya dikhana hai','kahan dikhana hai','callback func');
 ReactDOM.render(
   //div or [ , ] if version above 16 is compulsary for multiple elements
@@ -16,14 +27,14 @@ ReactDOM.render(
 
 
 
+
   <React.Fragment>
   
   <h1>
   List of top 5 netflix series
-   </h1>
-   <Card imgsrc={Sdata[0].imgsrc} title={Sdata[0].title} sname={Sdata[0].sname} link={Sdata[0].link}></Card>
-   <Card imgsrc={Sdata[1].imgsrc} title={Sdata[1].title} sname={Sdata[1].sname} link={Sdata[1].link}></Card>
-   <Card imgsrc={Sdata[2].imgsrc} title={Sdata[2].title} sname={Sdata[2].sname} link={Sdata[2].link}></Card>
+  </h1>
+  
+   { Sdata.map(ncard)}
 
   </React.Fragment>
 
