@@ -6,7 +6,7 @@ import './index.css'
 import * as ques from './App.jsx';
 
 import Card from './Card.jsx';
-
+import Sdata from './Sdata';
 
 // ReactDOM.render('kya dikhana hai','kahan dikhana hai','callback func');
 ReactDOM.render(
@@ -15,11 +15,16 @@ ReactDOM.render(
   //We should use React fragment instead of div if version is before 16 as div will create extra div
 
 
+
   <React.Fragment>
-   <Card imgsrc="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/04/23/903342-netflix-dark.jpg" title="A netflix originals" sname="dark" link="https://www.netflix.com/in/title/80100172"></Card>
-   <Card imgsrc="https://asianwiki.com/images/4/47/Human_Class-KDH.jpg" title="A netflix originals" sname="Extra curricular" link="https://www.netflix.com/title/80990668"></Card>
-   <Card imgsrc="https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png" title="A netflix originals" sname="Stranger Things" link="https://www.netflix.com/title/80057281"></Card>
   
+  <h1>
+  List of top 5 netflix series
+   </h1>
+   <Card imgsrc={Sdata[0].imgsrc} title={Sdata[0].title} sname={Sdata[0].sname} link={Sdata[0].link}></Card>
+   <Card imgsrc={Sdata[1].imgsrc} title={Sdata[1].title} sname={Sdata[1].sname} link={Sdata[1].link}></Card>
+   <Card imgsrc={Sdata[2].imgsrc} title={Sdata[2].title} sname={Sdata[2].sname} link={Sdata[2].link}></Card>
+
 
   </React.Fragment>
 
