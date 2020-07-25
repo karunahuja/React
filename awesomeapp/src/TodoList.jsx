@@ -1,21 +1,35 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 const ToDoList=(props)=>{
 
+    const [num,setNum]=useState(0);
+    
+    const incNum=()=>{
+        setNum(num+1)
+    }
 
-
+    const decNum=()=>{
+        if(num>0){
+        setNum(num-1)
+        }else{
+            alert("Sorry,zero limit")
+            setNum(0);
+        }
+    }
     return(
-    <>
-    <div className="todo_style">
-        <i className="fa fa-times" aria-hidden="true" onClick={()=>{
-        props.onSelect(props.id)
-
-        }}
-        />
-
-    <li>{props.text}</li>
-    </div>
-    </>)
+        <>
+    <div className="main_div">
+            <div className="center_div">
+    
+            
+                <h1>{num}</h1>
+            <div >
+                    <button onClick={incNum}>Increm</button>
+                    <button onClick={decNum}>Decrem</button>
+            </div>
+    </div></div>
+        </>
+        )
 }
 
 export default ToDoList;

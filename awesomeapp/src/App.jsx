@@ -31,33 +31,7 @@ const App = () => {
 
     return(
     <>
-<div className="main_div">
-        <div className="center_div">
-
-        
-            <h1>To Do list</h1>
-        
-        <input type="text" placeholder="Add a items" onChange={itemEvent} value={inputList}/>
-
-        <button onClick={listOfItems}>+</button>
-        <ol>
-            {/* <li>{inputList}</li> */}
-          {  
-              Items.map((itemval,index)=>{
-             return( <ToDoList key={index}
-             id={index}
-                text={itemval}
-                onSelect={deleteItems}
-              ></ToDoList>)
-
-         })}
-           
-        </ol>
-
-    </div>
-    </div>
-
-
+<ToDoList></ToDoList>
     </>
     )
 }
