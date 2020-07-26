@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import AddIcon from '@material-ui/icons/Add';
+import Button from '@material-ui/core/Button';
 
 const ToDoList=(props)=>{
 
@@ -24,8 +26,8 @@ const ToDoList=(props)=>{
             
                 <h1>{num}</h1>
             <div >
-                    <button onClick={incNum}>Increm</button>
-                    <button onClick={decNum}>Decrem</button>
+                    <Button onClick={incNum}><AddIcon></AddIcon></Button>
+                    <Button onClick={decNum}>Decrem</Button>
             </div>
     </div></div>
         </>
