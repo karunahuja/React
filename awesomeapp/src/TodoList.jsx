@@ -1,37 +1,48 @@
 import React,{useState} from 'react';
 import AddIcon from '@material-ui/icons/Add';
 import Button from '@material-ui/core/Button';
+// import Clock from 'react-digital-clock';
+import ListCom from './ListCom';
 
-const ToDoList=(props)=>{
+const ToDoList=()=>{
+const [item,setItem]=useState("buy an apple");
+const [newItem,setNewItem]=useState([])
 
-    const [num,setNum]=useState(0);
-    
-    const incNum=()=>{
-        setNum(num+1)
-    }
-
-    const decNum=()=>{
-        if(num>0){
-        setNum(num-1)
-        }else{
-            alert("Sorry,zero limit")
-            setNum(0);
-        }
-    }
-    return(
-        <>
-    <div className="main_div">
-            <div className="center_div">
-    
-            
-                <h1>{num}</h1>
-            <div >
-                    <Button onClick={incNum}><AddIcon></AddIcon></Button>
-                    <Button onClick={decNum}>Decrem</Button>
-            </div>
-    </div></div>
-        </>
-        )
+const itemEvent=(event)=>{
+    setItem(event.target.value);
 }
+
+const Listofitems=()=>{
+    setNewItem((prevValue)=>{
+        return [...prevValue,item];
+    })
+}
+
+
+
+return (
+<> 
+
+<div>
+
+<input type="text" name="" placeholder="Add items" onChange={itemEvent}></input>
+<Button className="newBtn" onClick={Listofitems}><AddIcon/></Button>
+  </div>  
+  <br/>
+
+
+<ol>
+    {/* <li>{item}</li> */}
+{
+    newItem.map((val,index)=>{
+        return <ListCom key={index} text={val}/>
+    })
+}
+</ol>
+
+</>    
+    
+    );
+};
 
 export default ToDoList;
