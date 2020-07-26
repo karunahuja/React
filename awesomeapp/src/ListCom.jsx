@@ -9,7 +9,7 @@ const cutIt=()=>{
     setLine(true);  
 }
 
-    return (
+    return ( 
     <div>
    
 <span onClick={cutIt}><DeleteIcon></DeleteIcon></span>
