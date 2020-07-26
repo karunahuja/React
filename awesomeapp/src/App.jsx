@@ -32,25 +32,40 @@ const App = () => {
     return(
     <>
 <h1>Welcome to my channel</h1>
-<button className="btn btn-success">Hey karun</button>
-{/* copied from doc */}
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div className="container">
+  <div className="row">
+    <div className="col-sm">
+    <div class="card" >
+  <img src="https://picsum.photos/200/300" class="card-img-top" alt="..." height="200px"/>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1"/>
+</div>
+    </div>
+    <div className="col-sm">
+    <div class="card" >
+  <img src="https://picsum.photos/200/300" class="card-img-top" alt="..." height="200px"/>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+</div>
+    </div>
+    <div className="col-sm">
+    <div class="card" >
+  <img src="https://picsum.photos/200/300" class="card-img-top" alt="..." height="200px"/>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form> 
-    
+</div>
+    </div>
+  </div>
+</div>
     </>
     )
 }
