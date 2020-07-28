@@ -1,5 +1,5 @@
 import React, { useState,useEffect} from 'react';
-import {Route,Switch} from 'react-router-dom'
+import {Route,Switch,Redirect} from 'react-router-dom'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import About from './About'
 import Menu from "./Menu"
@@ -27,7 +27,8 @@ const App = () => {
             } ></Route>
             <Route exact path="/contact" component={Contact} ></Route>
             <Route path="/contact/:fname" component={User} ></Route>
-            <Route  component={Error} ></Route>
+            {/* <Route  component={Error} ></Route> */}
+            <Redirect to="/"/>
             
         </Switch>
        </>)
