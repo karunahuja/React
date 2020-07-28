@@ -8,10 +8,12 @@ import App from './App.jsx';
 import Card from './Card.jsx';
 import Sdata from './Sdata';
 
+import {BrowserRouter} from "react-router-dom"
+
 ReactDOM.render(
 
-  
-<App></App>
+  <BrowserRouter>
+<App></App></BrowserRouter> 
   ,
   document.getElementById('root'));
 
