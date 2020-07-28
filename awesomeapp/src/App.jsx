@@ -8,29 +8,17 @@ import Service from './Service.jsx'
 import User from './User'
 import Search from "./Search"
 import Error from "./Error"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 //If we want to pass props use render method else use component method
 const App = () => {
   
         return(
         <>
-        <Menu></Menu>
-        <Switch>
-        
-            <Route exact path="/" component={()=>
-                <About name="About"/>
-            } ></Route>
-            <Route exact path="/Search" component={()=>
-                <Search/>
-            } ></Route>
-            <Route exact path="/service" render={()=>
-                <Service name="Service"/>
-            } ></Route>
-            <Route exact path="/contact" component={Contact} ></Route>
-            <Route path="/contact/:fname" component={User} ></Route>
-            {/* <Route  component={Error} ></Route> */}
-            <Redirect to="/"/>
-            
-        </Switch>
+       <div className="container">
+            <h1 className="text-center">Welcome</h1>
+<br/>
+<button className="btn btn-outline-success">Welcome to future</button>
+       </div>
        </>)
 
 }
