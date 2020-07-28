@@ -1,28 +1,41 @@
-import React, { createContext } from 'react';
-import ComponentA from './ComponentA'
+import React, { useState,useEffect} from 'react';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-const FirstName=createContext();
-const LastName=createContext();
-
 const App = () => {
+   const [num,setNum]=useState(0);
+   const [nums,setNums]=useState(0);
    
+   //use state  will be called everytime after render in index.js
+   useEffect(()=>{
+    alert("I am clicked");
+
+   })
+
         return(
-
-            <FirstName.Provider value={"Karun"}>
-            <LastName.Provider value={"Ahuja"}>
-            <ComponentA></ComponentA>
-            </LastName.Provider>
- 
+        <>
+        
+        <button onClick={()=>{setNum(num+1)
 
 
-            </FirstName.Provider>
-            
-        )
+        }
+        }>Click Me{num}</button>
+
+        <br/>
+
+        
+<button onClick={()=>{setNums(nums+1)
+
+
+}
+}>Click Me{nums}</button>
+
+
+       </> )
 
 
 }
 export default App;
-export {FirstName,LastName};
+
 
 
