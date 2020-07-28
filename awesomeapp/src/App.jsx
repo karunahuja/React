@@ -7,6 +7,7 @@ import Contact from './Contact'
 import Service from './Service.jsx'
 import User from './User'
 import Search from "./Search"
+import Error from "./Error"
 //If we want to pass props use render method else use component method
 const App = () => {
   
@@ -26,6 +27,7 @@ const App = () => {
             } ></Route>
             <Route exact path="/contact" component={Contact} ></Route>
             <Route path="/contact/:fname" component={User} ></Route>
+            <Route  component={Error} ></Route>
             
         </Switch>
        </>)
