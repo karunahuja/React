@@ -6,11 +6,11 @@ const App = () => {
    const [num,setNum]=useState(0);
    const [nums,setNums]=useState(0);
    
-   //use state  will be called everytime after render in index.js
+   //use effect for num will be called everytime after render in index.js
    useEffect(()=>{
     alert("I am clicked");
 
-   })
+   },[num])
 
         return(
         <>
