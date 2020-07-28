@@ -9,8 +9,8 @@ const App = () => {
    //use effect for num will be called everytime after render in index.js
    useEffect(()=>{
     alert("I am clicked");
-
-   },[num])
+document.title=`you clickd me ${num} times`
+   })
 
         return(
         <>
