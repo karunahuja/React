@@ -1,10 +1,17 @@
 import React from 'react'
-import{useParams} from "react-router-dom"
+import{useParams,useLocation} from "react-router-dom"
 
 const User=()=>{
     const {fname}=useParams();
-    return<h1>user{fname}page</h1>
-
-
+    const location=useLocation();
+    return(
+    <>
+    <h1>user{fname}page</h1>
+    <p>My current location is {location.pathname} </p>
+        {location.pathname===`/contact/user/karunahuja`?(
+            <button>ClickMe</button>
+        ):null}
+</>
+    )
 };
 export default User;
