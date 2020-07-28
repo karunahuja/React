@@ -6,6 +6,7 @@ import Menu from "./Menu"
 import Contact from './Contact'
 import Service from './Service.jsx'
 import User from './User'
+import Search from "./Search"
 //If we want to pass props use render method else use component method
 const App = () => {
   
@@ -16,6 +17,9 @@ const App = () => {
         
             <Route exact path="/" component={()=>
                 <About name="About"/>
+            } ></Route>
+            <Route exact path="/Search" component={()=>
+                <Search/>
             } ></Route>
             <Route exact path="/service" render={()=>
                 <Service name="Service"/>
